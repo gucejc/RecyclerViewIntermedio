@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SoccerDetailActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivImagenDetail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/manu_header"/>
+
+    <TextView
+        android:id="@+id/tvTitleDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:padding="10dp"
+        android:text="Manchester United"
+        android:background="@color/colorAccent"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivImagenDetail"/>
+
+    <TextView
+        android:id="@+id/tvSubtitleDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Esto es una descripción"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+
+        android:textSize="18sp"
+        android:textColor="#7E7C7C"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleDetail"
+        />
+
+    <TextView
+        android:id="@+id/tvDetailLong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Esto es una descripción larga"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="italic"
+        android:textSize="18sp"
+        android:textColor="#7E7C7C"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitleDetail"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
