@@ -21,7 +21,7 @@ class SoccerDetailActivity : AppCompatActivity() {
 
         supportActionBar?.apply {
             setDisplayHomeAsUpEnabled(true)
-            title="Nuevo titulo"
+            title="Nuevo titulo prueba"
         }
 
 
