@@ -99,6 +99,8 @@ class MainActivity : AppCompatActivity(),SoccerTitleInterface {
     // funcion onterfase que cambia el corazon  de favorito yno favorito
     override fun onFavoriteClicked(position: Int) {
 
+
+        Toast.makeText(applicationContext,"Pulsaste el boton favorito",Toast.LENGTH_LONG).show()
         //con estas 2 lineas activas o desactivas el corazon de favorito
         //dentro del cardview de la primera pantalla (fragmento1)
         val soccerTitle = soccerTitleList[position]
