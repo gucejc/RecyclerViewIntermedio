@@ -10,6 +10,7 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import java.util.zip.Inflater
 
 class SoccerDetailActivity : AppCompatActivity() {
@@ -71,8 +72,10 @@ class SoccerDetailActivity : AppCompatActivity() {
             }
             R.id.menuLink->{
                Log.i("URL",soccerTitleData.teamUrl)
-                val intent =Intent(Intent.ACTION_VIEW, Uri.parse(soccerTitleData.teamUrl))
-                startActivity(intent)
+                // aqui esta el cambio de branch solo de ejemplo
+                Toast.makeText(applicationContext,"valor de url "+soccerTitleData.teamUrl,Toast.LENGTH_LONG).show()
+                //val intent =Intent(Intent.ACTION_VIEW, Uri.parse(soccerTitleData.teamUrl))
+                //startActivity(intent)
                 true
             }
             R.id.menuFavorite->{
