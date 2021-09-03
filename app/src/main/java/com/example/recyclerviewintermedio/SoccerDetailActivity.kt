@@ -21,12 +21,12 @@ class SoccerDetailActivity : AppCompatActivity() {
 
         supportActionBar?.apply {
             setDisplayHomeAsUpEnabled(true)
-            title="Nuevo titulo prueba"
+            title="Nuevo titulo con cambio a example branch"
         }
 
 
 
-///////////////////////////////////////////// Aui un camino para  hacer la peticon de intent serializable////////////////////////
+///////////////////////////////////////////// Aqui un camino para  hacer la petición de intent serializable////////////////////////
         // super ojo  se debe asosiar el dato serializable  a la data clase TituloFutbol de lo contrario no jala
         // o en su defecto lo podemos dejar como la parte comentada
         //se asocia a la data clase  y a su vez se valida que acepte valores nulos (?) y si existen esos  valores
@@ -47,7 +47,7 @@ class SoccerDetailActivity : AppCompatActivity() {
         soccerTitleData=MainActivity.soccerTitleList.find {
             it.id==selectedSoccerId
         }?: TituloFutbol(
-            title = "falla en el sistema ",
+            title = "Falla en el Sistema ",
             descriptionLong = " Ups existe un proble intenta mas tarde")
         val imageDetail:ImageView=findViewById(R.id.ivImagenDetail)
         val tituloDeatil:TextView=findViewById(R.id.tvTitleDetail)
@@ -80,9 +80,11 @@ class SoccerDetailActivity : AppCompatActivity() {
                 Log.i("favorite","$isFavorited")
                 if(isFavorited){
                     item.setIcon(R.drawable.ic_favorite_border)
-                }else{
+                }
+                else{
                     item.setIcon(R.drawable.ic_favorite)
                 }
+
                 soccerTitleData.isFavorite=!isFavorited
                 true
             }
@@ -92,6 +94,7 @@ class SoccerDetailActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+
         menuInflater.inflate(R.menu.menu_soccer_detail,menu)
 
         if(soccerTitleData.isFavorite){
